@@ -62,4 +62,40 @@ export default defineConfig({
       size2: "&[data-size=token(spacing.2)]",
     },
   },
+
+  utilities: {
+    extend: {
+      br: {
+        className: "rounded", // css({ br: "sm" }) => rounded-sm
+        values: "radii", // connect values to the radii tokens
+        transform(value) {
+          return { borderRadius: value };
+        },
+      },
+
+      borderX: {
+        values: { small: "2px", medium: "5px" },
+        shorthand: "bx",
+        transform(value, { token }) {
+          return {
+            borderTopWidth: value,
+            borderTopColor: token("colors.gray.400"),
+          };
+        },
+      },
+
+      truncate: {
+        className: "truncate",
+        values: { type: "boolean" },
+        transform(value) {
+          if (!value) return {};
+          return {
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+          };
+        },
+      },
+    },
+  },
 });
