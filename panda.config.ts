@@ -51,4 +51,15 @@ export default defineConfig({
       },
     },
   },
+
+  conditions: {
+    extend: {
+      groupHover: "[role=group]:where(:hover, [data-hover]) &",
+
+      dark: '.dark &, [data-theme="dark"] &',
+
+      mq: "@media (min-width: token(sizes.4xl))",
+      size2: "&[data-size=token(spacing.2)]",
+    },
+  },
 });
