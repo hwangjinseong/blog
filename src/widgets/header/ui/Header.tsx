@@ -1,7 +1,7 @@
+import { GithubButton } from "@/shared/components/GithubButton";
 import { ThemeToggleButton } from "@/shared/components/ThemeToggleButton";
 import { css } from "@/styled-system/css";
 import { hstack } from "@/styled-system/patterns";
-import { FaGithub } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 
 const headerContainer = hstack({
@@ -31,7 +31,7 @@ function Header() {
       <p className={title}>blog</p>
       <div className={iconContainer}>
         <IoIosSearch className={icon} />
-        <FaGithub className={icon} />
+        <GithubButton />
         <ThemeToggleButton />
       </div>
     </div>
