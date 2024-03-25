@@ -3,7 +3,7 @@ import { FiSun } from "react-icons/fi";
 import { IoMoon } from "react-icons/io5";
 import { useTheme } from "..";
 
-function ThehemeToggleButton() {
+function ThemeToggleButton() {
   const { theme, handleClickTheme } = useTheme();
 
   const icon = css({
@@ -22,4 +22,4 @@ function ThehemeToggleButton() {
   );
 }
 
-export default ThehemeToggleButton;
+export default ThemeToggleButton;
