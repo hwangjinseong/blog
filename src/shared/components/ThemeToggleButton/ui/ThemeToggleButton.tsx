@@ -1,7 +1,7 @@
+import { useTheme } from "@/shared/hooks";
 import { css } from "@/styled-system/css";
 import { FiSun } from "react-icons/fi";
 import { IoMoon } from "react-icons/io5";
-import { useTheme } from "..";
 
 function ThemeToggleButton() {
   const { theme, handleClickTheme } = useTheme();
