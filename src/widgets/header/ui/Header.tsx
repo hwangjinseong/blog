@@ -1,8 +1,8 @@
 import { GithubButton } from "@/shared/components/GithubButton";
+import { SearchButton } from "@/shared/components/SearchButton";
 import { ThemeToggleButton } from "@/shared/components/ThemeToggleButton";
 import { css } from "@/styled-system/css";
 import { hstack } from "@/styled-system/patterns";
-import { IoIosSearch } from "react-icons/io";
 
 const headerContainer = hstack({
   justifyContent: "space-between",
@@ -20,17 +20,12 @@ const iconContainer = hstack({
   gap: 6,
 });
 
-const icon = css({
-  fontSize: "2xl",
-  cursor: "pointer",
-});
-
 function Header() {
   return (
     <div className={headerContainer}>
       <p className={title}>blog</p>
       <div className={iconContainer}>
-        <IoIosSearch className={icon} />
+        <SearchButton />
         <GithubButton />
         <ThemeToggleButton />
       </div>
