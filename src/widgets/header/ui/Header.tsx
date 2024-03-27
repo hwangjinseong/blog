@@ -8,27 +8,30 @@ import { hstack } from "@/styled-system/patterns";
 function Header() {
   const { theme } = useTheme();
 
-  const headerContainer = hstack({
-    justifyContent: "space-between",
-    px: 200,
-    py: 4,
-    borderBottom: "1px solid #eaeaea",
-    backgroundColor: theme === "light" ? "white" : "black",
-  });
-
-  const title = css({
-    fontSize: "xl",
-    fontWeight: "bold",
-    color: theme === "light" ? "black" : "white",
-  });
-
-  const iconContainer = hstack({
-    gap: 6,
-  });
   return (
-    <div className={headerContainer}>
-      <p className={title}>blog</p>
-      <div className={iconContainer}>
+    <div
+      className={hstack({
+        justifyContent: "space-between",
+        px: 200,
+        py: 4,
+        borderBottom: "1px solid #eaeaea",
+        backgroundColor: theme === "light" ? "white" : "black",
+      })}
+    >
+      <p
+        className={css({
+          fontSize: "xl",
+          fontWeight: "bold",
+          color: theme === "light" ? "black" : "white",
+        })}
+      >
+        blog
+      </p>
+      <div
+        className={hstack({
+          gap: 6,
+        })}
+      >
         <SearchButton />
         <GithubButton />
         <ThemeToggleButton />
