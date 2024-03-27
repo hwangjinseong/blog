@@ -9,6 +9,7 @@ function ThemeToggleButton() {
   const icon = css({
     fontSize: "2xl",
     cursor: "pointer",
+    color: theme === "light" ? "black" : "white",
   });
 
   return (
