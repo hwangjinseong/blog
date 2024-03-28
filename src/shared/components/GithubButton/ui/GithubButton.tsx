@@ -6,15 +6,12 @@ import { useTheme } from "@/shared/hooks";
 function GithubButton() {
   const { theme } = useTheme();
 
-  return (
-    <FaGithub
-      onClick={navigateToGithub}
-      className={css({
-        fontSize: "2xl",
-        cursor: "pointer",
-        color: theme === "light" ? "black" : "white",
-      })}
-    />
-  );
+  const iconStyle = css({
+    fontSize: "2xl",
+    cursor: "pointer",
+    color: theme === "light" ? "black" : "white",
+  });
+
+  return <FaGithub onClick={navigateToGithub} className={iconStyle} />;
 }
 export default GithubButton;
