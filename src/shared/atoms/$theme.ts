@@ -1,6 +1,5 @@
 import { atom } from "recoil";
-
-type Theme = "light" | "dark";
+import { Theme } from "../types/Theme";
 
 export const $theme = atom<Theme>({
   key: "$theme",
