@@ -6,7 +6,7 @@ import { IoMoon } from "react-icons/io5";
 function ThemeToggleButton() {
   const { theme, handleClickTheme } = useTheme();
 
-  const icon = css({
+  const iconStyle = css({
     fontSize: "2xl",
     cursor: "pointer",
     color: theme === "light" ? "black" : "white",
@@ -15,9 +15,9 @@ function ThemeToggleButton() {
   return (
     <button onClick={handleClickTheme}>
       {theme === "light" ? (
-        <FiSun className={icon} />
+        <FiSun className={iconStyle} />
       ) : (
-        <IoMoon className={icon} />
+        <IoMoon className={iconStyle} />
       )}
     </button>
   );
