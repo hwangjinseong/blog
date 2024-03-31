@@ -7,7 +7,8 @@ function GithubButton() {
   const { theme } = useTheme();
 
   const iconStyle = css({
-    fontSize: "2xl",
+    fontSize: "xl",
+    sm: { fontSize: "2xl" },
     cursor: "pointer",
     color: theme === "light" ? "black" : "white",
   });

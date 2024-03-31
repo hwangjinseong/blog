@@ -10,26 +10,24 @@ function Header() {
   const headerStyle = hstack({
     w: "100%",
     h: "60px",
-    paddingX: 4,
     bg: theme === "light" ? "white" : "purple.800",
     alignItems: "center",
     justifyContent: "space-between",
   });
 
   const textStyle = css({
-    fontSize: "xl",
+    fontSize: "13px",
+    sm: { fontSize: "18px" },
     fontWeight: "bold",
-    marginLeft: "85px",
   });
 
   const iconContainerStyle = hstack({
     gap: 6,
-    paddingRight: "85px",
   });
 
   return (
     <div className={headerStyle}>
-      <p className={textStyle}>blog</p>
+      <p className={textStyle}>기술 블로그</p>
       <div className={iconContainerStyle}>
         <GithubButton />
         <ThemeToggleButton />
