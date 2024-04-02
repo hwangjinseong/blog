@@ -7,8 +7,8 @@ function ThemeToggleButton() {
   const { theme, handleClickTheme } = useTheme();
 
   const iconStyle = css({
-    fontSize: "13px",
-    sm: { fontSize: "18px" },
+    fontSize: "16px",
+    sm: { fontSize: "20px" },
     cursor: "pointer",
     color: theme === "light" ? "black" : "white",
   });
