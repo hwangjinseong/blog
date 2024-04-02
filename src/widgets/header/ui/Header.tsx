@@ -22,7 +22,8 @@ function Header() {
   });
 
   const iconContainerStyle = hstack({
-    gap: 6,
+    gap: 4,
+    sm: { gap: 6 },
   });
 
   return (
