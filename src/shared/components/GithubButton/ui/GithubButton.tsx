@@ -2,17 +2,34 @@ import { css } from "@/styled-system/css";
 import { FaGithub } from "react-icons/fa";
 import { navigateToGithub } from "../lib";
 import { useTheme } from "@/shared/hooks";
+import { hstack } from "@/styled-system/patterns";
 
 function GithubButton() {
   const { theme } = useTheme();
 
+  const buttonStyle = hstack({
+    width: "36px",
+    height: "36px",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "0.5rem",
+    cursor: "pointer",
+    _hover: {
+      bg: theme === "light" ? "gray.100" : "gray.700",
+    },
+  });
+
   const iconStyle = css({
-    fontSize: "16px",
-    sm: { fontSize: "20px" },
+    fontSize: "18px",
+    sm: { fontSize: "24px" },
     cursor: "pointer",
     color: theme === "light" ? "black" : "white",
   });
 
-  return <FaGithub onClick={navigateToGithub} className={iconStyle} />;
+  return (
+    <button className={buttonStyle}>
+      <FaGithub onClick={navigateToGithub} className={iconStyle} />
+    </button>
+  );
 }
 export default GithubButton;
