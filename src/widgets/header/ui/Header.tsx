@@ -1,4 +1,5 @@
 import { GithubButton } from "@/shared/components/GithubButton";
+import { SearchButton } from "@/shared/components/SearchButton";
 import { ThemeToggleButton } from "@/shared/components/ThemeToggleButton";
 import { useTheme } from "@/shared/hooks";
 import { css } from "@/styled-system/css";
@@ -10,25 +11,26 @@ function Header() {
   const headerStyle = hstack({
     w: "100%",
     h: "60px",
-    bg: theme === "light" ? "white" : "purple.800",
     alignItems: "center",
     justifyContent: "space-between",
+    bg: theme === "light" ? "white" : "black",
   });
 
   const textStyle = css({
-    fontSize: "13px",
-    sm: { fontSize: "18px" },
-    fontWeight: "bold",
+    fontSize: "20px",
+    sm: { fontSize: "27px" },
+    fontFamily: "Rubik Scribble, system-ui",
+    fontWeight: 700,
   });
 
   const iconContainerStyle = hstack({
-    gap: 4,
-    sm: { gap: 6 },
+    gap: 1,
+    sm: { gap: 3 },
   });
 
   return (
     <div className={headerStyle}>
-      <p className={textStyle}>기술 블로그</p>
+      <p className={textStyle}>Blog</p>
       <div className={iconContainerStyle}>
         <GithubButton />
         <ThemeToggleButton />
