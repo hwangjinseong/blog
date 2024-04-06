@@ -14,32 +14,18 @@ function SearchButton() {
   } = useSearch();
 
   return (
-    <>
-      {/* {isSearchOpen && (
-        <input
-          type="text"
-          className={css({
-            position: "absolute",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "67%",
-            display: isSearchOpen ? "block" : "none",
-            border: "1px solid black",
-            borderRadius: "3px",
-          })}
-          value={searchForm}
-          onChange={(e) => handleChangeSearchForm(e)}
-        />
-      )} */}
-      <IoIosSearch
-        className={css({
-          fontSize: "2xl",
-          cursor: "pointer",
-          color: theme === "light" ? "black" : "white",
-        })}
-        onClick={handleClickSearchButton}
-      />
-    </>
+    <input
+      type="text"
+      className={css({
+        width: "300px",
+        border: "1px solid black",
+        borderRadius: "3px",
+        animation: "alternate 0.5s ease-in-out infinite",
+        transitionDuration: "fast",
+      })}
+      value={searchForm}
+      onChange={(e) => handleChangeSearchForm(e)}
+    />
   );
 }
 
