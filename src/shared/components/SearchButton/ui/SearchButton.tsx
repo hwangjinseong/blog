@@ -1,11 +1,8 @@
-import { useTheme } from "@/shared/hooks";
 import { css } from "@/styled-system/css";
 import { IoIosSearch } from "react-icons/io";
 import { useSearch } from "../hook";
 
 function SearchButton() {
-  const { theme } = useTheme();
-
   const {
     isSearchOpen,
     searchForm,

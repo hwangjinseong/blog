@@ -14,16 +14,16 @@ function GithubButton() {
     alignItems: "center",
     borderRadius: "0.5rem",
     cursor: "pointer",
+    WebkitTapHighlightColor: "transparent !important",
     _hover: {
       bg: theme === "light" ? "gray.100" : "gray.700",
     },
   });
 
   const iconStyle = css({
-    fontSize: "18px",
-    sm: { fontSize: "24px" },
+    fontSize: "24px",
+    sm: { fontSize: "26px" },
     cursor: "pointer",
-    color: theme === "light" ? "black" : "white",
   });
 
   return (

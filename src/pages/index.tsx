@@ -1,14 +1,24 @@
-import { css } from "../../styled-system/css";
+import { hstack } from "@/styled-system/patterns";
+import { Header } from "@/widgets/header/ui";
+import { Phrase } from "@/widgets/phrase";
 
-export default function Home() {
+function Home() {
+  const containerStyle = hstack({
+    width: "calc(vertical - 54px)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    maxWidth: "1020px",
+    margin: "1rem auto 2rem",
+  });
+
   return (
-    <>
-    <div className={css({
-      color: 'red',
-      fontSize: '20px'
-    })}>
-
+    <div className={containerStyle}>
+      <Header />
+      <Phrase>개발은 언제나 즐겁게!</Phrase>
     </div>
-    </>
   );
 }
+
+export default Home;

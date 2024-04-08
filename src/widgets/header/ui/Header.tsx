@@ -6,25 +6,22 @@ import { css } from "@/styled-system/css";
 import { hstack } from "@/styled-system/patterns";
 
 function Header() {
-  const { theme } = useTheme();
-
   const headerStyle = hstack({
     w: "100%",
     h: "60px",
     alignItems: "center",
     justifyContent: "space-between",
-    bg: theme === "light" ? "white" : "black",
   });
 
   const textStyle = css({
-    fontSize: "20px",
-    sm: { fontSize: "27px" },
+    fontSize: "22px",
+    sm: { fontSize: "26px" },
     fontFamily: "Rubik Scribble, system-ui",
     fontWeight: 700,
   });
 
   const iconContainerStyle = hstack({
-    gap: 1,
+    gap: 2,
     sm: { gap: 3 },
   });
 

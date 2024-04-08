@@ -7,14 +7,14 @@ function Phrase({ children }: PropsWithChildren) {
     w: "100%",
     h: "50px",
     alignItems: "center",
-    marginY: "50px",
+    marginY: "30px",
   });
 
   const phraseTextStyle = css({
     fontSize: "30px",
     sm: { fontSize: "35px" },
     fontWeight: "bold",
-    color: "primary",
+    animation: "bounce 1.5s infinite",
   });
 
   return (
