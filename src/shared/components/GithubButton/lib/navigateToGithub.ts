@@ -1,5 +1,5 @@
 function navigateToGithub() {
-  window.location.href = "https://github.com/hwangjinseong";
+  window.open("https://github.com/hwangjinseong");
 }
 
 export default navigateToGithub;
