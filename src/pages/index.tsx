@@ -4,7 +4,7 @@ import { Phrase } from "@/widgets/phrase";
 
 function Home() {
   const containerStyle = hstack({
-    width: "calc(vertical - 54px)",
+    width: "calc(100% - 54px)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

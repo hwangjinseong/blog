@@ -12,7 +12,7 @@ function GithubButton() {
     height: "36px",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: "0.5rem",
+    rounded: "md",
     cursor: "pointer",
     WebkitTapHighlightColor: "transparent !important",
     _hover: {

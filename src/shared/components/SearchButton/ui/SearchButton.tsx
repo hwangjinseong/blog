@@ -16,7 +16,7 @@ function SearchButton() {
       className={css({
         width: "300px",
         border: "1px solid black",
-        borderRadius: "3px",
+        rounded: "md",
         animation: "alternate 0.5s ease-in-out infinite",
         transitionDuration: "fast",
       })}
