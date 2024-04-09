@@ -1,22 +1,17 @@
-import { defineConfig, defineRecipe } from "@pandacss/dev";
+import { defineConfig } from "@pandacss/dev";
 
 export default defineConfig({
-  // Whether to use css reset
   preflight: true,
 
-  // Where to look for your css declarations
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
 
-  // Files to exclude
   exclude: [],
 
-  // Useful for theme customization
+  outdir: "styled-system",
+
   theme: {
     extend: {},
   },
-
-  // The output directory for your css system
-  outdir: "styled-system",
 
   patterns: {
     extend: {
@@ -27,12 +22,9 @@ export default defineConfig({
           hideScrollbar: true,
         },
         properties: {
-          // The direction of the scroll
           direction: { type: "enum", value: ["horizontal", "vertical"] },
-          // Whether to hide the scrollbar
           hideScrollbar: { type: "boolean" },
         },
-        // disallow the `overflow` property (in TypeScript)
         blocklist: ["overflow"],
         transform(props) {
           const { direction, hideScrollbar, ...rest } = props;
@@ -56,7 +48,8 @@ export default defineConfig({
     extend: {
       groupHover: "[role=group]:where(:hover, [data-hover]) &",
 
-      dark: '.dark &, [data-theme="dark"] &',
+      mainTheme: "[data-theme=main] &",
+      secondaryTheme: "[data-theme=secondary] &",
 
       mq: "@media (min-width: token(sizes.4xl))",
       size2: "&[data-size=token(spacing.2)]",
@@ -66,8 +59,8 @@ export default defineConfig({
   utilities: {
     extend: {
       br: {
-        className: "rounded", // css({ br: "sm" }) => rounded-sm
-        values: "radii", // connect values to the radii tokens
+        className: "rounded",
+        values: "radii",
         transform(value) {
           return { borderRadius: value };
         },
